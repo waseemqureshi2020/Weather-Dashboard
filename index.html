@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="weather-app">
+        <h1>Weather Dashboard</h1>
+        
+        <!-- Search Bar -->
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter a city name (e.g., London)">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <!-- Error Message Container (Hidden by default) -->
+        <div id="error-message" class="error hidden">
+            City not found. Please try again.
+        </div>
+
+        <!-- Loading Spinner (Hidden by default) -->
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Weather Results Container -->
+        <div id="weather-result" class="weather-info hidden">
+            <h2 id="city-name">City Name</h2>
+            <div class="weather-main">
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <h3 id="temperature">0°C</h3>
+            </div>
+            <p id="description">Clear sky</p>
+            
+            <div class="weather-details">
+                <div class="detail">
+                    <span>Humidity</span>
+                    <strong id="humidity">0%</strong>
+                </div>
+                <div class="detail">
+                    <span>Wind Speed</span>
+                    <strong id="wind-speed">0 m/s</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
